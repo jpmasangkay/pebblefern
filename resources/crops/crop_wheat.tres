@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wheat_05.png" id="1_nukwm"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_xc6vs"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wheat_00.png" id="3_cwxh4"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wheat_01.png" id="4_xgvyc"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wheat_02.png" id="5_2q6wc"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wheat_03.png" id="6_sry2m"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wheat_04.png" id="7_xhfet"]
+
+[resource]
+script = ExtResource("2_xc6vs")
+crop_id = &"wheat"
+display_name = "Wheat"
+botanical_name = "Triticum aestivum"
+seed_item_id = &"seed_wheat"
+harvest_item_id = &"crop_wheat"
+seasons = PackedInt32Array(1, 2)
+stage_textures = Array[Texture2D]([ExtResource("3_cwxh4"), ExtResource("4_xgvyc"), ExtResource("5_2q6wc"), ExtResource("6_sry2m"), ExtResource("7_xhfet")])
+harvest_icon = ExtResource("1_nukwm")

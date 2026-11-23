@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/entities/resource_node.gd" id="1_res"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wood.png" id="2_chip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_res"]
+size = Vector2(12, 8)
+
+[node name="ResourceNode" type="StaticBody2D" groups=["resource_nodes"]]
+collision_layer = 1
+collision_mask = 0
+script = ExtResource("1_res")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_res")
+
+[node name="HitParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -6)
+emitting = false
+amount = 6
+texture = ExtResource("2_chip")
+lifetime = 0.36
+one_shot = true
+explosiveness = 0.92
+direction = Vector2(0, -1)
+spread = 65.0
+gravity = Vector2(0, 260)
+initial_velocity_min = 38.0
+initial_velocity_max = 78.0
+scale_amount_min = 0.28
+scale_amount_max = 0.45

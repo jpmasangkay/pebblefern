@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/entities/player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Characters/Human/IDLE/base_idle_strip9.png" id="2_body"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Characters/Human/IDLE/shorthair_idle_strip9.png" id="3_hair"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Characters/Human/IDLE/tools_idle_strip9.png" id="4_tool"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/selectbox_tl.png" id="5_tl"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/selectbox_tr.png" id="6_tr"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/selectbox_bl.png" id="7_bl"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/selectbox_br.png" id="8_br"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_feet"]
+radius = 4.5
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_layer = 4
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_feet")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="BodySprite" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("2_body")
+offset = Vector2(0, -6)
+hframes = 9
+
+[node name="HairSprite" type="Sprite2D" parent="Visuals"]
+z_index = 1
+texture = ExtResource("3_hair")
+offset = Vector2(0, -6)
+hframes = 9
+
+[node name="ToolSprite" type="Sprite2D" parent="Visuals"]
+z_index = 2
+texture = ExtResource("4_tool")
+offset = Vector2(0, -6)
+hframes = 9
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = false
+
+[node name="TargetCursor" type="Node2D" parent="."]
+top_level = true
+z_index = 5
+
+[node name="CornerTL" type="Sprite2D" parent="TargetCursor"]
+position = Vector2(-5, -5)
+texture = ExtResource("5_tl")
+
+[node name="CornerTR" type="Sprite2D" parent="TargetCursor"]
+position = Vector2(5, -5)
+texture = ExtResource("6_tr")
+
+[node name="CornerBL" type="Sprite2D" parent="TargetCursor"]
+position = Vector2(-5, 5)
+texture = ExtResource("7_bl")
+
+[node name="CornerBR" type="Sprite2D" parent="TargetCursor"]
+position = Vector2(5, 5)
+texture = ExtResource("8_br")

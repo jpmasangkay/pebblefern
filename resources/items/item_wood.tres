@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/wood.png" id="1_tyhcq"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_mgacl"]
+
+[resource]
+script = ExtResource("2_mgacl")
+id = &"wood"
+display_name = "Wood"
+description = "Sturdy sanctuary timber used for crafting fences, chests, and upgrades."
+icon = ExtResource("1_tyhcq")
+sell_price = 4

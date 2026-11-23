@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3]
+
+[ext_resource type="Script" path="res://resources/recipe_data.gd" id="1_5ysle"]
+
+[resource]
+script = ExtResource("1_5ysle")
+id = &"recipe_torch"
+display_name = "Outdoor Torch"
+description = "Animated lantern post casting warm light across your farm at night."
+output_item_id = &"place_torch"
+ingredient_ids = Array[StringName]([&"wood", &"fiber"])
+ingredient_counts = PackedInt32Array(2, 1)

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_05.png" id="1_svjgd"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_xj533"]
+
+[resource]
+script = ExtResource("2_xj533")
+id = &"crop_pumpkin"
+display_name = "Pumpkin"
+description = "Freshly harvested Pumpkin from Solstice Sanctuary."
+category = 2
+icon = ExtResource("1_svjgd")
+buy_price = 640
+sell_price = 320
+vitality_restore = 45.0
+crop_id = &"pumpkin"

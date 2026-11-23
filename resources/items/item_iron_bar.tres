@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_htyrh"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/hammer.png" id="2_sfnhn"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_uaqo0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htyrh"]
+atlas = ExtResource("1_htyrh")
+region = Rect2(880, 480, 16, 16)
+
+[resource]
+script = ExtResource("3_uaqo0")
+id = &"iron_bar"
+display_name = "Iron Bar"
+description = "Tempered iron ingot forged in a Stone Furnace. Required for top-grade Iron tools."
+icon = SubResource("AtlasTexture_htyrh")
+overlay_icon = ExtResource("2_sfnhn")
+sell_price = 130

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/seeds_generic.png" id="1_i62p3"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_05.png" id="2_5boeh"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_60idj"]
+
+[resource]
+script = ExtResource("3_60idj")
+id = &"seed_parsnip"
+display_name = "Parsnip Seeds"
+description = "Plant on tilled soil. Matures in 4 days."
+category = 1
+icon = ExtResource("1_i62p3")
+overlay_icon = ExtResource("2_5boeh")
+buy_price = 20
+sell_price = 10
+crop_id = &"parsnip"

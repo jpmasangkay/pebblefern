@@ -1,0 +1,106 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/world/npc_house.gd" id="1_rc5kt"]
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="2_nu5og"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="3_h7fum"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehw0d"]
+size = Vector2(76, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r40ds"]
+size = Vector2(22, 14)
+
+[sub_resource type="Gradient" id="Gradient_7o47c"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4inil"]
+gradient = SubResource("Gradient_7o47c")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1c5k7"]
+atlas = ExtResource("3_h7fum")
+region = Rect2(848, 512, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lso4p"]
+atlas = ExtResource("3_h7fum")
+region = Rect2(832, 496, 16, 32)
+
+[node name="MarenCottage" type="Node2D" unique_id=2112853100]
+script = ExtResource("1_rc5kt")
+building_id = &"maren_cottage"
+display_name = "Maren's Cottage"
+door_spawn_offset = Vector2(40, 14)
+footprint_rect = Rect2(-4, -96, 88, 100)
+
+[node name="GroundShadows" type="TileMapLayer" parent="." unique_id=1723188509]
+z_index = -5
+position = Vector2(0, -96)
+tile_map_data = PackedByteArray("AAAAAAYAAAAOAAEAAAABAAYAAAAMAAEAAAACAAYAAAAMAAEAAAADAAYAAAAMAAEAAAAEAAYAAAAOAAEAABA=")
+tile_set = ExtResource("2_nu5og")
+
+[node name="Room1BuildingLayer" type="TileMapLayer" parent="." unique_id=690958765]
+position = Vector2(0, -96)
+tile_map_data = PackedByteArray("AAAAAAEAAAAcABcAABABAAEAAAAbABIAABACAAEAAAASABIAAAADAAEAAAAbABIAAAAEAAEAAAAcABcAAAAAAAIAAAAcABMAABABAAIAAAAVABMAAAACAAIAAAASABIAAAADAAIAAAAVABMAABAEAAIAAAAcABMAAAAAAAMAAAAcABMAABABAAMAAAAbABMAABACAAMAAAASABIAAAADAAMAAAAbABMAAAAEAAMAAAAcABMAAAAAAAQAAAAcABQAABABAAQAAAAbABQAABACAAQAAAAYABUAAAADAAQAAAAbABQAAAAEAAQAAAAcABQAAAAAAAUAAAAcABUAABABAAUAAAAhABUAAAACAAUAAAAhABUAAAADAAUAAAAhABUAAAAEAAUAAAAcABUAAAA=")
+tile_set = ExtResource("2_nu5og")
+
+[node name="Room1Decoration02Layer" type="TileMapLayer" parent="." unique_id=682069977]
+z_index = 1
+position = Vector2(0, -96)
+tile_map_data = PackedByteArray("AAABAAAAAAAgABEAAAACAAAAAAAhABEAAAADAAAAAAAiABEAAAABAAEAAAAgABMAAAACAAEAAAAhABMAAAADAAEAAAAiABMAAAABAAIAAAAgABQAAAACAAIAAAAhABQAAAADAAIAAAAiABQAAAABAAMAAAAgABUAAAACAAMAAAAhABUAAAADAAMAAAAiABUAAAACAAUAAAAOAAwAAAA=")
+tile_set = ExtResource("2_nu5og")
+
+[node name="WallCollisions" type="StaticBody2D" parent="." unique_id=22542000]
+collision_mask = 0
+
+[node name="SolidHull" type="CollisionShape2D" parent="WallCollisions" unique_id=1185689725]
+position = Vector2(40, -38.4)
+shape = SubResource("RectangleShape2D_ehw0d")
+
+[node name="DoorPortal" type="Area2D" parent="." unique_id=1834700547]
+collision_layer = 8
+collision_mask = 4
+
+[node name="DoorZone" type="CollisionShape2D" parent="DoorPortal" unique_id=1210027583]
+position = Vector2(40, 3.199997)
+shape = SubResource("RectangleShape2D_r40ds")
+
+[node name="NightLights" type="Node2D" parent="." unique_id=1330869963]
+
+[node name="WinL" type="PointLight2D" parent="NightLights" unique_id=41276399]
+position = Vector2(24, -8)
+color = Color(1, 0.8, 0.44, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_4inil")
+texture_scale = 0.72
+
+[node name="WinR" type="PointLight2D" parent="NightLights" unique_id=1646905313]
+position = Vector2(56, -8)
+color = Color(1, 0.8, 0.44, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_4inil")
+texture_scale = 0.72
+
+[node name="PorchLight" type="PointLight2D" parent="NightLights" unique_id=1840922466]
+position = Vector2(40, -3.199997)
+color = Color(1, 0.74, 0.38, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_4inil")
+texture_scale = 1.05
+
+[node name="DoorDaisies" type="Sprite2D" parent="." unique_id=721216559]
+z_index = 1
+position = Vector2(0, -12)
+texture = SubResource("AtlasTexture_1c5k7")
+centered = false
+
+[node name="DoorSunflower" type="Sprite2D" parent="." unique_id=282416469]
+z_index = 1
+position = Vector2(64, -28)
+texture = SubResource("AtlasTexture_lso4p")
+centered = false

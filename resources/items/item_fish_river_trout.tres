@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/fish.png" id="1_uihro"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_whhov"]
+
+[resource]
+script = ExtResource("2_whhov")
+id = &"fish_river_trout"
+display_name = "River Trout"
+description = "Speckled freshwater trout caught in the Farm Pond or Central Village River."
+category = 4
+icon = ExtResource("1_uihro")
+icon_tint = Color(0.84, 0.98, 0.9, 1)
+sell_price = 45
+vitality_restore = 18.0

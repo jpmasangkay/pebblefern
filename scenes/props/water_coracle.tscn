@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Other/spr_deco_coracle_strip4.png" id="1_1ka21"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="2_23ppa"]
+
+[node name="WaterCoracle" type="Node2D" unique_id=2069132446]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=459201163]
+texture = ExtResource("1_1ka21")
+hframes = 4
+script = ExtResource("2_23ppa")
+frame_rate = 4.0
+random_start_phase = true

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3]
+
+[ext_resource type="Script" path="res://resources/recipe_data.gd" id="1_bvmb0"]
+
+[resource]
+script = ExtResource("1_bvmb0")
+id = &"recipe_chest"
+display_name = "Storage Chest"
+description = "16-slot persistent storage chest for crops, seeds, fish, and bars."
+output_item_id = &"place_chest"
+ingredient_ids = Array[StringName]([&"wood"])
+ingredient_counts = PackedInt32Array(15)

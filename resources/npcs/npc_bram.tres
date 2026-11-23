@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="NpcData" format=3]
+
+[ext_resource type="Script" path="res://resources/npc_data.gd" id="1_gg0at"]
+
+[resource]
+script = ExtResource("1_gg0at")
+npc_id = &"bram"
+display_name = "Bram"
+role_title = "Coastal Angler & Pier Keeper"
+bio = "Tends the wooden ocean piers on East Islet."
+hair_style = &"mophair"
+hair_tint = Color(0.86, 0.82, 0.75, 1)
+home_building_id = &"bram_cabin"
+loved_items = Array[StringName]([&"fish_ocean_snapper", &"fish_golden_carp", &"fish", &"fish_river_trout", &"fish_sun_perch"])
+liked_items = Array[StringName]([&"wood", &"crop_carrot", &"fish_sea_bass", &"fish_coral_flounder", &"fish_spring_koi", &"fish_mountain_minnow"])
+disliked_items = Array[StringName]([&"stone", &"fiber"])
+liked_categories = PackedInt32Array()
+morning_lines = PackedStringArray("Tide\'s rolling in clean over the sandbar! Ocean Snappers bite sharp right off the north pier.", "Try casting in the Highland Spring, the Village River, and my Ocean Piers — every water holds its own catch!")
+afternoon_lines = PackedStringArray("Salt air and creaking pier planks — can\'t imagine a finer office than this islet!", "Watch for that exclamation splash when your line tugs, then reel quick!")
+evening_lines = PackedStringArray("Strolled across the ocean bridge to swap tall tales in the plaza! Care for a fishing story?", "Once hooked a Golden Carp in the river so bright it lit up the bridge pilings — true story!")
+season_lines = PackedStringArray("Bloom tides bring lively schools of Sea Bass right up against the pilings.", "Sun season turns the eastern channel pure turquoise — best pier-casting weather all year!", "Harvest swells push fat Ocean Snappers closer to shore. Bring your rod!", "Frost chill makes the water glass-clear — great for spotting Spring Koi up north!")
+heart3_lines = PackedStringArray("You\'ve got proper angler\'s patience! Save a spot on the north pier next time you head east.", "I patched an extra plank on the ocean bridge so your boots stay dry crossing over!")
+heart6_lines = PackedStringArray("Best fishing buddy I\'ve ever had on Pebblefern! Come sunrise or dusk, my pier\'s always open to you.", "Between your harvests and our catches, Bramblebrook eats like royalty!")
+gift_loved_line = "By the tide!! What a catch! Look at the shine on those scales — you're a natural angler!"
+gift_liked_line = "Hey, right on! Always handy down by the piers — thanks a bunch!"
+gift_neutral_line = "Much obliged, mate! Good seeing you."
+gift_disliked_line = "Heh, can't use that as bait or plank patch, I'm afraid. Still, thanks!"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="NpcData" format=3]
+
+[ext_resource type="Script" path="res://resources/npc_data.gd" id="1_4rsx5"]
+
+[resource]
+script = ExtResource("1_4rsx5")
+npc_id = &"aldric"
+display_name = "Mayor Aldric"
+role_title = "Mayor of Bramblebrook"
+bio = "Curates the Community Board at Village Hall."
+hair_style = &"bowlhair"
+hair_tint = Color(1.25, 2.05, 2.35, 1)
+home_building_id = &"aldric_hall"
+loved_items = Array[StringName]([&"crop_pumpkin", &"crop_cabbage", &"crop_sunflower"])
+liked_items = Array[StringName]([&"crop_carrot", &"crop_parsnip"])
+disliked_items = Array[StringName]([&"fiber", &"stone"])
+liked_categories = PackedInt32Array()
+morning_lines = PackedStringArray("A splendid morning across Bramblebrook! Have you checked the Community Board today?", "Every freshly tilled row on Solstice Plateau puts new spirit into our whole township.")
+afternoon_lines = PackedStringArray("Neighbors pin fresh requests on the Community Board every morning — great way to earn Sunbursts and goodwill!", "I do love watching everyone gather in the plaza as the afternoon light softens.")
+evening_lines = PackedStringArray("Good evening, my friend! Seeing all five lanterns aglow over the square warms an old mayor\'s heart.", "Don\'t forget to rest before midnight — Solstice Farm will be waiting fresh at dawn.")
+season_lines = PackedStringArray("Bloom brings fresh hope to Bramblebrook! Let\'s make this our finest season yet.", "Sun days are bright and generous — perfect weather for strolling out to Bram\'s piers.", "Ah, Harvest! Nothing rivals a prize pumpkin or crisp cabbage on the Village Hall table!", "Frost settles gently over our roofs. Keep warm and look out for your neighbors!")
+heart3_lines = PackedStringArray("Everyone in Bramblebrook speaks warmly of you! You\'ve stitched our little community right back together.", "Stop by Village Hall anytime — the tea kettle is always on for a good friend.")
+heart6_lines = PackedStringArray("When I first handed you the deed to Solstice Plateau, I hoped for the best — you\'ve surpassed every dream!", "Pebblefern Island is truly lucky to have you as a neighbor and dear friend.")
+gift_loved_line = "Magnificent!! A prize-worthy specimen! Why, this deserves a place of honor in Village Hall!"
+gift_liked_line = "Splendid, truly splendid! Nothing better than homegrown island produce!"
+gift_neutral_line = "Why thank you kindly! Very neighborly of you."
+gift_disliked_line = "Hmm, quite an unconventional gift... I'll file it away politely."

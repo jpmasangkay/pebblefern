@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/fish.png" id="1_kltvg"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_xbvx4"]
+
+[resource]
+script = ExtResource("2_xbvx4")
+id = &"fish_sun_perch"
+display_name = "Sun Perch"
+description = "Warm amber-finned perch fond of sunny bends along Bramblebrook River."
+category = 4
+icon = ExtResource("1_kltvg")
+icon_tint = Color(1, 0.88, 0.54, 1)
+sell_price = 55
+vitality_restore = 20.0

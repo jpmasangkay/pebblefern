@@ -1,0 +1,56 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/shipping_bin.gd" id="1_itf5u"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_7tnro"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_05.png" id="3_feitc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvfo8"]
+atlas = ExtResource("2_7tnro")
+region = Rect2(624, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt76n"]
+atlas = ExtResource("2_7tnro")
+region = Rect2(624, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqjs1"]
+atlas = ExtResource("2_7tnro")
+region = Rect2(640, 160, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8sxch"]
+size = Vector2(26, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r27g"]
+size = Vector2(42, 28)
+
+[node name="ShippingBin" type="StaticBody2D" unique_id=1509459697]
+collision_mask = 0
+script = ExtResource("1_itf5u")
+
+[node name="BackStackedCrate" type="Sprite2D" parent="." unique_id=507925155]
+texture = SubResource("AtlasTexture_hvfo8")
+offset = Vector2(6, -18)
+
+[node name="ProduceCrateBase" type="Sprite2D" parent="." unique_id=398815692]
+texture = SubResource("AtlasTexture_wt76n")
+offset = Vector2(0, -6)
+
+[node name="ProduceFill" type="Sprite2D" parent="." unique_id=937664056]
+position = Vector2(0, -10)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_feitc")
+
+[node name="SideCrate" type="Sprite2D" parent="." unique_id=1511464856]
+texture = SubResource("AtlasTexture_iqjs1")
+offset = Vector2(16, -6)
+
+[node name="BinCollider" type="CollisionShape2D" parent="." unique_id=2146107596]
+position = Vector2(8, -3)
+shape = SubResource("RectangleShape2D_8sxch")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1701784299]
+collision_layer = 8
+collision_mask = 4
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=957442378]
+position = Vector2(8, -4)
+shape = SubResource("RectangleShape2D_2r27g")

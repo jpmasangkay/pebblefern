@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_r2mgr"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_82r2y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2mgr"]
+atlas = ExtResource("1_r2mgr")
+region = Rect2(16, 240, 16, 16)
+
+[resource]
+script = ExtResource("2_82r2y")
+id = &"place_stone_path"
+display_name = "Stone Path"
+description = "Walkable grey cobblestone paver for neat courtyard footpaths."
+category = 5
+icon = SubResource("AtlasTexture_r2mgr")
+sell_price = 4
+placeable_object_id = &"stone_path"

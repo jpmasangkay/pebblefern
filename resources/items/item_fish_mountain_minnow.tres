@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/fish.png" id="1_i4rf5"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_bgc2e"]
+
+[resource]
+script = ExtResource("2_bgc2e")
+id = &"fish_mountain_minnow"
+display_name = "Mountain Minnow"
+description = "Nimble silver-blue minnow darting near the northern waterfall brink."
+category = 4
+icon = ExtResource("1_i4rf5")
+icon_tint = Color(0.76, 0.92, 1, 1)
+sell_price = 50
+vitality_restore = 16.0

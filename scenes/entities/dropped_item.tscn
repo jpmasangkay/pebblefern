@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/entities/dropped_item.gd" id="1_drop"]
+
+[node name="DroppedItem" type="Node2D"]
+visible = false
+script = ExtResource("1_drop")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+centered = true

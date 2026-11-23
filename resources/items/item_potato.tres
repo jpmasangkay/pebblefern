@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_05.png" id="1_30te0"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_wopyt"]
+
+[resource]
+script = ExtResource("2_wopyt")
+id = &"crop_potato"
+display_name = "Potato"
+description = "Freshly harvested Potato from Solstice Sanctuary."
+category = 2
+icon = ExtResource("1_30te0")
+buy_price = 160
+sell_price = 80
+vitality_restore = 25.0
+crop_id = &"potato"

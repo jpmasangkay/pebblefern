@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/seeds_generic.png" id="1_s1seu"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/sunflower_05.png" id="2_b34wy"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_g13xq"]
+
+[resource]
+script = ExtResource("3_g13xq")
+id = &"seed_sunflower"
+display_name = "Sunflower Seeds"
+description = "Plant on tilled soil. Matures in 8 days."
+category = 1
+icon = ExtResource("1_s1seu")
+overlay_icon = ExtResource("2_b34wy")
+buy_price = 60
+sell_price = 30
+crop_id = &"sunflower"

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="NpcData" format=3]
+
+[ext_resource type="Script" path="res://resources/npc_data.gd" id="1_ltp36"]
+
+[resource]
+script = ExtResource("1_ltp36")
+npc_id = &"kaelen"
+display_name = "Kaelen"
+role_title = "Blacksmith & Forgemaster"
+bio = "Forges Copper & Iron tools at South Road Forge."
+hair_style = &"spikeyhair"
+hair_tint = Color(0.84, 0.78, 0.76, 1)
+home_building_id = &"kaelen_forge"
+shop_id = &"kaelen_forge"
+loved_items = Array[StringName]([&"copper_bar", &"iron_bar"])
+liked_items = Array[StringName]([&"stone", &"wood", &"crop_potato"])
+disliked_items = Array[StringName]([&"fiber", &"wild_berry"])
+liked_categories = PackedInt32Array()
+morning_lines = PackedStringArray("Coals are glowing bright already. Good steel starts with an early fire!", "Heading down to Pebblefern Quarry? Upgrade your Pickaxe and those copper boulders crack like walnuts.")
+afternoon_lines = PackedStringArray("Ring of the anvil keeps the whole south lane awake. Need a Copper or Iron upgrade?", "Build yourself a Stone Furnace from your Craft tab — smelt Rock and Wood into clean bars!")
+evening_lines = PackedStringArray("Quenched the hearth for the night. Nothing beats cool plaza breeze after ten hours by the coals.", "Even a blacksmith needs a quiet evening chat with neighbors.")
+season_lines = PackedStringArray("Bloom rain keeps my quench trough full without me hauling a single bucket!", "Sun heat plus forge heat? Haha, keeps my shoulders loose!", "Harvest is when folks wear their hoes and scythes down — bring \'em by if the edge dulls.", "Frost nights are best spent right beside my furnace. Warmest corner on Pebblefern Island!")
+heart3_lines = PackedStringArray("You swing a sturdy tool, farmer. I\'d trust my finest tempered iron in your hands any day.", "Next time you roast potatoes, save one for me — best forge supper there is!")
+heart6_lines = PackedStringArray("I\'ve forged blades and plows for twenty years, and watching you rebuild Solstice Farm beats every commission.", "Consider my anvil yours anytime, friend. We\'re keeping this island strong together.")
+gift_loved_line = "Whoa — pure, clean-smelted metal! Look at that grain! You really know how to make a smith grin!"
+gift_liked_line = "Solid and practical — just how I like it! Much appreciated!"
+gift_neutral_line = "Heh, appreciate you bringing this over."
+gift_disliked_line = "Er... not much use for this around hot coals, but thanks for the thought."

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_sedny"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/VFX/Fire/spr_deco_fire_01_strip4.png" id="2_kk3ob"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_cd1pl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sedny"]
+atlas = ExtResource("1_sedny")
+region = Rect2(737, 304, 30, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmoa1"]
+atlas = ExtResource("2_kk3ob")
+region = Rect2(0, 0, 5, 10)
+
+[resource]
+script = ExtResource("3_cd1pl")
+id = &"place_furnace"
+display_name = "Stone Furnace"
+description = "Interact [E] to smelt Rock + Wood into Copper Bars and Iron Bars for Kaelen's upgrades."
+category = 5
+icon = SubResource("AtlasTexture_sedny")
+overlay_icon = SubResource("AtlasTexture_tmoa1")
+max_stack = 10
+sell_price = 60
+placeable_object_id = &"furnace"

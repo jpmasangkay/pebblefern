@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_05.png" id="1_kvn65"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_f1muo"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_00.png" id="3_6hafi"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_01.png" id="4_pm1rt"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_02.png" id="5_ys0ww"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_03.png" id="6_suukk"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_04.png" id="7_frkkp"]
+
+[resource]
+script = ExtResource("2_f1muo")
+crop_id = &"potato"
+display_name = "Potato"
+botanical_name = "Solanum tuberosum"
+seed_item_id = &"seed_potato"
+harvest_item_id = &"crop_potato"
+seasons = PackedInt32Array(0)
+days_to_mature = 6
+stage_textures = Array[Texture2D]([ExtResource("3_6hafi"), ExtResource("4_pm1rt"), ExtResource("5_ys0ww"), ExtResource("6_suukk"), ExtResource("7_frkkp")])
+harvest_icon = ExtResource("1_kvn65")
+harvest_max_yield = 2

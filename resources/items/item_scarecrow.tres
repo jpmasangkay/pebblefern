@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_05.png" id="1_s0x0i"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_c7les"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_a8uv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0x0i"]
+atlas = ExtResource("2_c7les")
+region = Rect2(640, 64, 16, 16)
+
+[resource]
+script = ExtResource("3_a8uv7")
+id = &"place_scarecrow"
+display_name = "Scarecrow"
+description = "Cozy pumpkin guardian protecting surrounding garden crops across a 5-tile radius."
+category = 5
+icon = ExtResource("1_s0x0i")
+overlay_icon = SubResource("AtlasTexture_s0x0i")
+max_stack = 10
+sell_price = 50
+placeable_object_id = &"scarecrow"

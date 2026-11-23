@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_05.png" id="1_o8qoh"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_cwwxi"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_00.png" id="3_cx344"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_01.png" id="4_qr2iw"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_02.png" id="5_smyl7"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_03.png" id="6_bmp8c"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_04.png" id="7_asimg"]
+
+[resource]
+script = ExtResource("2_cwwxi")
+crop_id = &"kale"
+display_name = "Kale"
+botanical_name = "Brassica sabellica"
+seed_item_id = &"seed_kale"
+harvest_item_id = &"crop_kale"
+seasons = PackedInt32Array(0, 2)
+days_to_mature = 6
+stage_textures = Array[Texture2D]([ExtResource("3_cx344"), ExtResource("4_qr2iw"), ExtResource("5_smyl7"), ExtResource("6_bmp8c"), ExtResource("7_asimg")])
+harvest_icon = ExtResource("1_o8qoh")

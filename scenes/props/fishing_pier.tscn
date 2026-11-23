@@ -1,0 +1,11 @@
+[gd_scene format=4]
+
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="1_7ttk7"]
+
+[node name="FishingPier" type="Node2D" unique_id=344915626]
+
+[node name="PierDeck" type="TileMapLayer" parent="." unique_id=1550978425]
+z_index = -6
+position = Vector2(0, -32)
+tile_map_data = PackedByteArray("AAAAAAAAAAAmAAQAAAAAAAEAAAAmAAUAAAAAAAIAAAAmAAYAAAABAAEAAAAmAAUAAAABAAIAAAAmAAYAAAACAAAAAAAmAAQAAAACAAEAAAAmAAUAAAACAAIAAAAmAAYAAAADAAEAAAAmAAUAAAADAAIAAAAmAAYAAAAEAAAAAAAmAAQAAAAEAAEAAAAmAAUAAAAEAAIAAAAmAAYAAAAFAAAAAAAmAAQAAAAFAAEAAAAmAAUAAAAFAAIAAAAmAAYAAAA=")
+tile_set = ExtResource("1_7ttk7")

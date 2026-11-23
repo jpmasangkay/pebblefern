@@ -1,0 +1,219 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/world/market_stall.gd" id="1_w83mg"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_ufecd"]
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="3_qbnyt"]
+[ext_resource type="Script" path="res://scripts/world/npc_actor.gd" id="4_85kh8"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Characters/Human/IDLE/base_idle_strip9.png" id="5_t5d05"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Characters/Human/IDLE/curlyhair_idle_strip9.png" id="6_3y38w"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Characters/Human/IDLE/tools_idle_strip9.png" id="7_uvcf6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3wib"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(832, 496, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi0db"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(848, 512, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1r3l"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(720, 532, 16, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5ehf"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(752, 534, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h48i"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(752, 512, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3tyn"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(640, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_207xl"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(624, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w07f"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(624, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4aya"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(718, 160, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfp8h"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(722, 160, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hghm4"]
+atlas = ExtResource("2_ufecd")
+region = Rect2(608, 256, 16, 16)
+
+[sub_resource type="Gradient" id="Gradient_501vl"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hdpm5"]
+gradient = SubResource("Gradient_501vl")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d48ki"]
+size = Vector2(60, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a6f7"]
+size = Vector2(30, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_adoh4"]
+size = Vector2(14, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_snpen"]
+size = Vector2(14, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bclhr"]
+size = Vector2(64, 18)
+
+[node name="MarketStall" type="StaticBody2D" unique_id=2089576886]
+collision_mask = 0
+script = ExtResource("1_w83mg")
+
+[node name="BotanicalPlanters" type="Node2D" parent="." unique_id=1207891784]
+z_index = -1
+
+[node name="RightPottedSunflower" type="Sprite2D" parent="BotanicalPlanters" unique_id=2053972728]
+position = Vector2(40, 2)
+texture = SubResource("AtlasTexture_n3wib")
+
+[node name="RightPottedDaisies" type="Sprite2D" parent="BotanicalPlanters" unique_id=374355976]
+position = Vector2(52, 8)
+texture = SubResource("AtlasTexture_xi0db")
+
+[node name="OpenBoothInterior" type="TileMapLayer" parent="." unique_id=148762208]
+z_index = -4
+position = Vector2(-40, -52)
+tile_map_data = PackedByteArray("AAABAAMAAAAKAAkAAAACAAMAAAAKAAkAAAADAAMAAAAKAAkAAAA=")
+tile_set = ExtResource("3_qbnyt")
+
+[node name="BoothSupportPosts" type="TileMapLayer" parent="." unique_id=678041236]
+z_index = -3
+position = Vector2(-40, -52)
+tile_map_data = PackedByteArray("AAAAAAMAAAAPAA4AAAAEAAMAAAARAA4AAAA=")
+tile_set = ExtResource("3_qbnyt")
+
+[node name="BoothShelves" type="Node2D" parent="." unique_id=1531767425]
+z_index = -3
+
+[node name="SeedPacketShelf" type="Sprite2D" parent="BoothShelves" unique_id=243215275]
+position = Vector2(-23, -6)
+texture = SubResource("AtlasTexture_n1r3l")
+centered = false
+
+[node name="ShopSupplyCabinet" type="Sprite2D" parent="BoothShelves" unique_id=142076514]
+position = Vector2(7, -4)
+texture = SubResource("AtlasTexture_n5ehf")
+centered = false
+
+[node name="CounterCeramicJar" type="Sprite2D" parent="BoothShelves" unique_id=2023476020]
+position = Vector2(15, -6)
+scale = Vector2(0.75, 0.75)
+texture = SubResource("AtlasTexture_7h48i")
+
+[node name="KioskRoof" type="TileMapLayer" parent="." unique_id=1822229966]
+z_index = -2
+position = Vector2(-40, -52)
+tile_map_data = PackedByteArray("AAAAAAAAAAARABEAABABAAAAAAAQABEAAAACAAAAAAAQABEAAAADAAAAAAAQABEAAAAEAAAAAAARABEAAAAAAAEAAAAPABMAAAABAAEAAAASABIAAAACAAEAAAASABIAAAADAAEAAAASABIAAAAEAAEAAAARABIAAAAAAAIAAAAPABQAAAABAAIAAAAQABQAAAACAAIAAAAQABQAAAADAAIAAAAQABQAAAAEAAIAAAARABQAAAA=")
+tile_set = ExtResource("3_qbnyt")
+
+[node name="ProduceCrateBottom" type="Sprite2D" parent="." unique_id=829357429]
+z_index = -1
+position = Vector2(-40, 4)
+texture = SubResource("AtlasTexture_y3tyn")
+
+[node name="ProduceCrateTop" type="Sprite2D" parent="." unique_id=166158405]
+z_index = -1
+position = Vector2(-40, -8)
+texture = SubResource("AtlasTexture_207xl")
+
+[node name="ShopBarrel" type="Sprite2D" parent="." unique_id=1474001910]
+z_index = -1
+position = Vector2(-28, 12)
+texture = SubResource("AtlasTexture_0w07f")
+
+[node name="MarenNPC" type="CharacterBody2D" parent="." unique_id=715678829]
+z_index = -1
+position = Vector2(0, 9)
+script = ExtResource("4_85kh8")
+npc_id = &"maren"
+display_name = "Maren"
+hair_style = &"curlyhair"
+interact_enabled = false
+add_feet_collider = false
+greeting_lines = PackedStringArray("Fresh Bloom seeds just arrived! Step up to the counter anytime.", "The soil on Solstice Plateau grows the sweetest parsnips on the island.")
+
+[node name="BodySprite" type="Sprite2D" parent="MarenNPC" unique_id=1384102573]
+texture = ExtResource("5_t5d05")
+offset = Vector2(0, -6)
+hframes = 9
+
+[node name="HairSprite" type="Sprite2D" parent="MarenNPC" unique_id=359000105]
+texture = ExtResource("6_3y38w")
+offset = Vector2(0, -6)
+hframes = 9
+
+[node name="ToolSprite" type="Sprite2D" parent="MarenNPC" unique_id=270047533]
+texture = ExtResource("7_uvcf6")
+offset = Vector2(0, -6)
+hframes = 9
+
+[node name="ShopCounterLeft" type="Sprite2D" parent="." unique_id=2116502669]
+position = Vector2(-8, 13)
+scale = Vector2(1, 0.84)
+texture = SubResource("AtlasTexture_b4aya")
+
+[node name="ShopCounterRight" type="Sprite2D" parent="." unique_id=766382555]
+position = Vector2(8, 13)
+scale = Vector2(1, 0.84)
+texture = SubResource("AtlasTexture_rfp8h")
+
+[node name="GardenWaterBarrel" type="Sprite2D" parent="." unique_id=1862008359]
+z_index = -1
+position = Vector2(40, 12)
+texture = SubResource("AtlasTexture_hghm4")
+
+[node name="ShopWarmLight" type="PointLight2D" parent="." unique_id=488264458]
+position = Vector2(0, 6)
+color = Color(1, 0.78, 0.42, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_hdpm5")
+texture_scale = 1.15
+
+[node name="KioskHullCollider" type="CollisionShape2D" parent="." unique_id=1338783470]
+position = Vector2(0, -12)
+shape = SubResource("RectangleShape2D_d48ki")
+
+[node name="ShopCounterCollider" type="CollisionShape2D" parent="." unique_id=1292694717]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_7a6f7")
+
+[node name="CratesCollider" type="CollisionShape2D" parent="." unique_id=132567025]
+position = Vector2(-38, 5)
+shape = SubResource("RectangleShape2D_adoh4")
+
+[node name="PlantersCollider" type="CollisionShape2D" parent="." unique_id=1831166819]
+position = Vector2(42, 9)
+shape = SubResource("RectangleShape2D_snpen")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1195613409]
+collision_layer = 8
+collision_mask = 4
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=1900698795]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_bclhr")

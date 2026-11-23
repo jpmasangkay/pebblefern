@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ToolData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/sword.png" id="1_qskdy"]
+[ext_resource type="Script" path="res://resources/tool_data.gd" id="2_l33aa"]
+
+[resource]
+script = ExtResource("2_l33aa")
+tool_kind = 4
+player_anim_state = 7
+id = &"tool_scythe"
+display_name = "Sanctuary Scythe"
+description = "Clears weeds, withered stalks, and harvests mature crops."
+category = 0
+icon = ExtResource("1_qskdy")
+max_stack = 1

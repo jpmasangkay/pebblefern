@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_05.png" id="1_e568p"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_lkhra"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_00.png" id="3_7fh6o"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_01.png" id="4_jg42o"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_02.png" id="5_s8hdm"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_03.png" id="6_olsh1"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_04.png" id="7_h6s4j"]
+
+[resource]
+script = ExtResource("2_lkhra")
+crop_id = &"pumpkin"
+display_name = "Pumpkin"
+botanical_name = "Cucurbita pepo"
+seed_item_id = &"seed_pumpkin"
+harvest_item_id = &"crop_pumpkin"
+seasons = PackedInt32Array(2)
+days_to_mature = 13
+stage_textures = Array[Texture2D]([ExtResource("3_7fh6o"), ExtResource("4_jg42o"), ExtResource("5_s8hdm"), ExtResource("6_olsh1"), ExtResource("7_h6s4j")])
+harvest_icon = ExtResource("1_e568p")

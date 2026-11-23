@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_pv1fp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aw2pi"]
+atlas = ExtResource("1_pv1fp")
+region = Rect2(704, 288, 32, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3mttk"]
+size = Vector2(22, 10)
+
+[node name="VillageStatue" type="StaticBody2D" unique_id=2767304]
+collision_mask = 0
+
+[node name="StatueSprite" type="Sprite2D" parent="." unique_id=785653629]
+texture = SubResource("AtlasTexture_aw2pi")
+offset = Vector2(0, -24)
+
+[node name="StatueBaseCollider" type="CollisionShape2D" parent="." unique_id=1492902596]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_3mttk")

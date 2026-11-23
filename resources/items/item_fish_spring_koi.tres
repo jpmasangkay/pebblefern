@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/fish.png" id="1_xhbf8"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_mp824"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_s0unl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhbf8"]
+atlas = ExtResource("2_mp824")
+region = Rect2(496, 48, 16, 16)
+
+[resource]
+script = ExtResource("3_s0unl")
+id = &"fish_spring_koi"
+display_name = "Spring Koi"
+description = "Vibrant vermilion koi raised in the crystal-clear waters of Highland Spring."
+category = 4
+icon = ExtResource("1_xhbf8")
+icon_tint = Color(1, 0.6, 0.48, 1)
+overlay_icon = SubResource("AtlasTexture_xhbf8")
+sell_price = 85
+vitality_restore = 25.0

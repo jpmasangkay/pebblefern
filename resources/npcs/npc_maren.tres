@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="NpcData" format=3]
+
+[ext_resource type="Script" path="res://resources/npc_data.gd" id="1_x52x1"]
+
+[resource]
+script = ExtResource("1_x52x1")
+npc_id = &"maren"
+display_name = "Maren"
+role_title = "Botanist & Seed Merchant"
+bio = "Runs the green-roofed Seed Shop in Bramblebrook."
+hair_style = &"curlyhair"
+home_building_id = &"maren_cottage"
+shop_id = &"maren_seeds"
+loved_items = Array[StringName]([&"crop_sunflower", &"crop_cauliflower"])
+liked_items = Array[StringName]([&"wild_berry"])
+disliked_items = Array[StringName]([&"stone", &"fiber"])
+liked_categories = PackedInt32Array(2)
+morning_lines = PackedStringArray("Morning dew still clings to the clover! Fresh seed packets are sorted for your garden.", "Solstice Plateau catches the very first sunlight — parsnips and sunflowers adore it up there.")
+afternoon_lines = PackedStringArray("Step right up to the stall whenever you need fresh seeds or want to sell your harvest!", "I\'ve been sketching petal charts all afternoon. Nothing beats a crisp head of cauliflower.")
+evening_lines = PackedStringArray("What a lovely evening in Bramblebrook Plaza! It\'s nice to rest my feet after market hours.", "The lanterns coming on around the square always remind me how cozy this little island is.")
+season_lines = PackedStringArray("Bloom season is here! Parsnips, carrots, potatoes, and cauliflower are all thriving.", "Sun season makes my sunflowers stretch right toward the sky — keep your watering can topped up!", "Harvest brings rich orange pumpkins and crisp cabbages. The whole village smells of cider!", "Frost quietens the soil, so it\'s the finest time to gather timber, fish, and plan spring beds.")
+heart3_lines = PackedStringArray("You\'ve got a genuine green thumb, friend! Every time you pass my cottage, the garden looks brighter.", "I set aside my plumpest sunflower seeds whenever I spot you crossing the farm bridge!")
+heart6_lines = PackedStringArray("Honestly, Solstice Farm hasn\'t bloomed like this in years. I\'m so glad you made Pebblefern your home.", "Whenever you bring me fresh flowers or veggies, it feels like the whole island is thriving together.")
+gift_loved_line = "Oh!! A gleaming beauty — you remembered my absolute favorite! I'll press a petal in my journal!"
+gift_liked_line = "Ooh, so fresh and vibrant! Thank you kindly — I can't wait to cook with this tonight!"
+gift_neutral_line = "Oh, for me? How thoughtful of you to drop by!"
+gift_disliked_line = "Oh... well, I suppose I can tuck this behind the potting shed. Thanks anyway."

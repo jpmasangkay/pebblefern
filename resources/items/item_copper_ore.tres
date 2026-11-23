@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_mfip0"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_60f7l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuih4"]
+atlas = ExtResource("1_mfip0")
+region = Rect2(882, 450, 12, 12)
+
+[resource]
+script = ExtResource("2_60f7l")
+id = &"copper_ore"
+display_name = "Copper Ore"
+description = "Gleaming raw copper mined inside Pebblefern Cave. Smelt 3 with 1 Wood in a Stone Furnace!"
+icon = SubResource("AtlasTexture_kuih4")
+sell_price = 20

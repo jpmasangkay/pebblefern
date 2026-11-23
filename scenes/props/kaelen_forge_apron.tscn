@@ -1,0 +1,108 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/world_interactable.gd" id="1_hojcr"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_24wny"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/VFX/Fire/spr_deco_fire_02_strip4.png" id="3_y1g4u"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="4_fw4cx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uao43"]
+atlas = ExtResource("2_24wny")
+region = Rect2(624, 272, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lw7xd"]
+atlas = ExtResource("2_24wny")
+region = Rect2(592, 272, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3s4cx"]
+atlas = ExtResource("2_24wny")
+region = Rect2(592, 288, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocv37"]
+atlas = ExtResource("2_24wny")
+region = Rect2(656, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inqy5"]
+atlas = ExtResource("2_24wny")
+region = Rect2(608, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_781gt"]
+atlas = ExtResource("2_24wny")
+region = Rect2(640, 480, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6l3di"]
+size = Vector2(48, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48t2y"]
+size = Vector2(70, 34)
+
+[sub_resource type="Gradient" id="Gradient_5nr47"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aobyf"]
+gradient = SubResource("Gradient_5nr47")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="KaelenForgeApron" type="StaticBody2D" unique_id=244258074]
+collision_mask = 0
+script = ExtResource("1_hojcr")
+interactable_id = &"kaelen_forge_apron"
+action_kind = 2
+prompt_text = "[E] Forge (Kaelen's Upgrades)"
+
+[node name="BlacksmithFurnace" type="Sprite2D" parent="." unique_id=1000431141]
+position = Vector2(-14, -12)
+texture = SubResource("AtlasTexture_uao43")
+
+[node name="ForgeFlame" type="Sprite2D" parent="." unique_id=1590278336]
+position = Vector2(-14, -4)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_y1g4u")
+hframes = 4
+script = ExtResource("4_fw4cx")
+frame_rate = 8.0
+
+[node name="QuenchTrough" type="Sprite2D" parent="." unique_id=60350695]
+position = Vector2(14, -10)
+texture = SubResource("AtlasTexture_lw7xd")
+
+[node name="BlacksmithAnvil" type="Sprite2D" parent="." unique_id=2085155460]
+position = Vector2(4, 4)
+texture = SubResource("AtlasTexture_3s4cx")
+
+[node name="ForgeWeaponBarrel" type="Sprite2D" parent="." unique_id=117053763]
+position = Vector2(24, -4)
+texture = SubResource("AtlasTexture_ocv37")
+
+[node name="ForgeWaterBarrel" type="Sprite2D" parent="." unique_id=1820157110]
+position = Vector2(26, 8)
+texture = SubResource("AtlasTexture_inqy5")
+
+[node name="ForgeFirewood" type="Sprite2D" parent="." unique_id=1868374581]
+position = Vector2(-28, 4)
+texture = SubResource("AtlasTexture_781gt")
+
+[node name="ForgeApronCollider" type="CollisionShape2D" parent="." unique_id=1307772919]
+shape = SubResource("RectangleShape2D_6l3di")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1804367718]
+collision_layer = 8
+collision_mask = 4
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=696002894]
+position = Vector2(2, 12)
+shape = SubResource("RectangleShape2D_48t2y")
+
+[node name="NightLights" type="Node2D" parent="." unique_id=393746944]
+
+[node name="ForgeGlow" type="PointLight2D" parent="NightLights" unique_id=2009164518]
+position = Vector2(-14, -4)
+color = Color(1, 0.56, 0.2, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_aobyf")
+texture_scale = 1.3

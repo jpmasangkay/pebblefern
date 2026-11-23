@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_1u85d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb7hd"]
+atlas = ExtResource("1_1u85d")
+region = Rect2(608, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlxcr"]
+atlas = ExtResource("1_1u85d")
+region = Rect2(624, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffvxo"]
+atlas = ExtResource("1_1u85d")
+region = Rect2(672, 32, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypyl6"]
+size = Vector2(44, 8)
+
+[node name="ConnectedFenceH" type="StaticBody2D" unique_id=1121262428]
+collision_mask = 0
+
+[node name="LeftPost" type="Sprite2D" parent="." unique_id=201342901]
+texture = SubResource("AtlasTexture_xb7hd")
+offset = Vector2(-16, -6)
+
+[node name="MidPost" type="Sprite2D" parent="." unique_id=255356475]
+texture = SubResource("AtlasTexture_wlxcr")
+offset = Vector2(0, -6)
+
+[node name="RightPost" type="Sprite2D" parent="." unique_id=1577949427]
+texture = SubResource("AtlasTexture_ffvxo")
+offset = Vector2(16, -6)
+
+[node name="FenceHCollider" type="CollisionShape2D" parent="." unique_id=1865690615]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_ypyl6")

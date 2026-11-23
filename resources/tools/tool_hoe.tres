@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ToolData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/shovel.png" id="1_y56m2"]
+[ext_resource type="Script" path="res://resources/tool_data.gd" id="2_d0gvl"]
+
+[resource]
+script = ExtResource("2_d0gvl")
+id = &"tool_hoe"
+display_name = "Rusty Hoe"
+description = "Tills meadow and garden earth for planting seeds."
+category = 0
+icon = ExtResource("1_y56m2")
+max_stack = 1

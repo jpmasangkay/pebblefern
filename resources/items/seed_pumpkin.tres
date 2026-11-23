@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/seeds_generic.png" id="1_o7vd6"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/pumpkin_05.png" id="2_ps1o8"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_vlllq"]
+
+[resource]
+script = ExtResource("3_vlllq")
+id = &"seed_pumpkin"
+display_name = "Pumpkin Seeds"
+description = "Plant on tilled soil. Matures in 13 days."
+category = 1
+icon = ExtResource("1_o7vd6")
+overlay_icon = ExtResource("2_ps1o8")
+buy_price = 100
+sell_price = 50
+crop_id = &"pumpkin"

@@ -1,0 +1,100 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/world/npc_house.gd" id="1_qluve"]
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="2_xbsod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35gq1"]
+size = Vector2(92, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvba1"]
+size = Vector2(56, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cp1py"]
+size = Vector2(22, 14)
+
+[sub_resource type="Gradient" id="Gradient_t28h1"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vl11u"]
+gradient = SubResource("Gradient_t28h1")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="AldricVillageHall" type="Node2D" unique_id=822041181]
+script = ExtResource("1_qluve")
+building_id = &"aldric_hall"
+display_name = "Village Hall"
+interior_theme_id = &"aldric"
+door_spawn_offset = Vector2(56, 14)
+footprint_rect = Rect2(-4, -96, 104, 100)
+
+[node name="GroundShadows" type="TileMapLayer" parent="." unique_id=1189383994]
+z_index = -5
+position = Vector2(0, -96)
+tile_map_data = PackedByteArray("AAAAAAUAAAAOAAEAAAABAAUAAAAMAAEAAAAEAAUAAAAMAAEAAAAFAAUAAAAOAAEAABABAAYAAAAOAAEAAAACAAYAAAAMAAEAAAADAAYAAAAMAAEAAAAEAAYAAAAOAAEAABA=")
+tile_set = ExtResource("2_xbsod")
+
+[node name="Room1BuildingLayer" type="TileMapLayer" parent="." unique_id=769041085]
+position = Vector2(0, -96)
+tile_map_data = PackedByteArray("AAAAAAAAAAAPACkAAAABAAAAAAAQACkAAAACAAAAAAAQACkAAAADAAAAAAAQACkAAAAEAAAAAAAQACkAABAFAAAAAAAPACkAABAAAAEAAAAPACsAAAABAAEAAAASACoAAAACAAEAAAASACoAAAADAAEAAAASACoAAAAEAAEAAAASACoAAAAFAAEAAAARACoAAAAAAAIAAAARACwAABABAAIAAAAQACwAAAACAAIAAAAQACwAAAADAAIAAAAQACwAAAAEAAIAAAAQACwAAAAFAAIAAAARACwAAAAAAAMAAAAPACwAAAABAAMAAAAQACwAAAACAAMAAAAQACwAAAADAAMAAAAQACwAAAAEAAMAAAAQACwAAAAFAAMAAAAPACwAABAAAAQAAAAPAC0AAAABAAQAAAAQAC0AAAACAAQAAAAQACwAAAADAAQAAAAQACwAAAAEAAQAAAAQAC0AAAAFAAQAAAAPAC0AABABAAUAAAAGAAoAAAACAAUAAAAQAC4AAAADAAUAAAAQAC8AAAAEAAUAAAAHAAoAAAA=")
+tile_set = ExtResource("2_xbsod")
+
+[node name="Room1Decoration02Layer" type="TileMapLayer" parent="." unique_id=299008923]
+z_index = 1
+position = Vector2(0, -96)
+tile_map_data = PackedByteArray("AAABAAAAAAAdACkAAAACAAAAAAAeACkAAAADAAAAAAAeACkAAAAEAAAAAAAfACkAAAABAAEAAAAdACoAAAACAAEAAAAeACoAAAADAAEAAAAeACoAAAAEAAEAAAAfACoAAAABAAIAAAAdAC0AAAACAAIAAAAeAC0AAAADAAIAAAAeAC0AAAAEAAIAAAAfAC0AAAACAAMAAAABAAwAAAABAAQAAAARACwAABACAAQAAAABAAwAAAAEAAQAAAARACwAAAABAAUAAAARAC0AABADAAUAAAAkABsAAAAEAAUAAAARAC0AAAA=")
+tile_set = ExtResource("2_xbsod")
+
+[node name="WallCollisions" type="StaticBody2D" parent="." unique_id=2061226088]
+collision_mask = 0
+
+[node name="SolidMainHall" type="CollisionShape2D" parent="WallCollisions" unique_id=976117194]
+position = Vector2(48, -52)
+shape = SubResource("RectangleShape2D_35gq1")
+
+[node name="SolidPortico" type="CollisionShape2D" parent="WallCollisions" unique_id=183166111]
+position = Vector2(48, -9.599998)
+shape = SubResource("RectangleShape2D_kvba1")
+
+[node name="DoorPortal" type="Area2D" parent="." unique_id=1272614388]
+collision_layer = 8
+collision_mask = 4
+
+[node name="DoorZone" type="CollisionShape2D" parent="DoorPortal" unique_id=1175980802]
+position = Vector2(56, 3.199997)
+shape = SubResource("RectangleShape2D_cp1py")
+
+[node name="NightLights" type="Node2D" parent="." unique_id=1388960385]
+
+[node name="DormerL" type="PointLight2D" parent="NightLights" unique_id=208169581]
+position = Vector2(36.8, -59.2)
+color = Color(1, 0.8, 0.45, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_vl11u")
+texture_scale = 0.72
+
+[node name="DormerR" type="PointLight2D" parent="NightLights" unique_id=1253609896]
+position = Vector2(59.2, -59.2)
+color = Color(1, 0.8, 0.45, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_vl11u")
+texture_scale = 0.72
+
+[node name="HallWin" type="PointLight2D" parent="NightLights" unique_id=1239757762]
+position = Vector2(40, -8)
+color = Color(1, 0.78, 0.42, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_vl11u")
+texture_scale = 0.85
+
+[node name="PorchLight" type="PointLight2D" parent="NightLights" unique_id=1009605161]
+position = Vector2(56, -3.199997)
+color = Color(1, 0.74, 0.38, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_vl11u")
+texture_scale = 1.15

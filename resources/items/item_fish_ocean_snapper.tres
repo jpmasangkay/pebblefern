@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/fish.png" id="1_6b1eq"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_gwait"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_q6ja8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b1eq"]
+atlas = ExtResource("2_gwait")
+region = Rect2(928, 304, 16, 16)
+
+[resource]
+script = ExtResource("3_q6ja8")
+id = &"fish_ocean_snapper"
+display_name = "Ocean Snapper"
+description = "Ruby-scaled reef snapper from deep eastern waters. A delicacy in Bramblebrook!"
+category = 4
+icon = ExtResource("1_6b1eq")
+icon_tint = Color(1, 0.52, 0.54, 1)
+overlay_icon = SubResource("AtlasTexture_6b1eq")
+sell_price = 95
+vitality_restore = 28.0

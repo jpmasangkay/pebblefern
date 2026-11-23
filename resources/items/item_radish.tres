@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_05.png" id="1_8wsv3"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_qq5dj"]
+
+[resource]
+script = ExtResource("2_qq5dj")
+id = &"crop_radish"
+display_name = "Radish"
+description = "Freshly harvested Radish from Solstice Sanctuary."
+category = 2
+icon = ExtResource("1_8wsv3")
+buy_price = 180
+sell_price = 90
+vitality_restore = 24.0
+crop_id = &"radish"

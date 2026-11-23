@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/fish.png" id="1_e0l4u"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_5vjrf"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_qirqo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0l4u"]
+atlas = ExtResource("2_5vjrf")
+region = Rect2(640, 480, 16, 16)
+
+[resource]
+script = ExtResource("3_qirqo")
+id = &"fish_golden_carp"
+display_name = "Golden Carp"
+description = "A rare gleaming carp prized across the valley. Bram's favorite river catch!"
+category = 4
+icon = ExtResource("1_e0l4u")
+icon_tint = Color(1, 0.84, 0.24, 1)
+overlay_icon = SubResource("AtlasTexture_e0l4u")
+sell_price = 140
+vitality_restore = 35.0

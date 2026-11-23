@@ -1,0 +1,10 @@
+[gd_scene format=4]
+
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="1_v7clv"]
+
+[node name="StoneWallGate" type="Node2D" unique_id=1050635648]
+
+[node name="StoneWallTiles" type="TileMapLayer" parent="." unique_id=477519073]
+position = Vector2(-48, -16)
+tile_map_data = PackedByteArray("AAAAAAAAAAAsAAEAAAABAAAAAAAtAAEAAAACAAAAAAAuAAEAAAADAAAAAAAtAAEAAAAEAAAAAAAuAAIAAAAFAAAAAAAvAAEAAAA=")
+tile_set = ExtResource("1_v7clv")

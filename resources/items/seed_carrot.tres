@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/seeds_generic.png" id="1_u8mnr"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_05.png" id="2_uu257"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_ho8fm"]
+
+[resource]
+script = ExtResource("3_ho8fm")
+id = &"seed_carrot"
+display_name = "Carrot Seeds"
+description = "Plant on tilled soil. Matures in 4 days."
+category = 1
+icon = ExtResource("1_u8mnr")
+overlay_icon = ExtResource("2_uu257")
+buy_price = 25
+sell_price = 12
+crop_id = &"carrot"

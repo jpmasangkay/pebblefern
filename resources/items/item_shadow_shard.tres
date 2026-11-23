@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_kujoo"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_qbdlh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbled"]
+atlas = ExtResource("1_kujoo")
+region = Rect2(882, 386, 12, 12)
+
+[resource]
+script = ExtResource("2_qbdlh")
+id = &"shadow_shard"
+display_name = "Shadow Shard"
+description = "Eerie dark crystal dropped by cave skeletons. Kaelen and merchants buy them for a tidy sum."
+icon = SubResource("AtlasTexture_sbled")
+sell_price = 40

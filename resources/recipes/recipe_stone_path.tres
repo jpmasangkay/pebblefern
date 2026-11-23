@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3]
+
+[ext_resource type="Script" path="res://resources/recipe_data.gd" id="1_glaax"]
+
+[resource]
+script = ExtResource("1_glaax")
+id = &"recipe_stone_path"
+display_name = "Stone Path"
+description = "Craft 2 walkable cobblestone pavers for courtyard walkways."
+output_item_id = &"place_stone_path"
+output_count = 2
+ingredient_ids = Array[StringName]([&"stone"])
+ingredient_counts = PackedInt32Array(2)

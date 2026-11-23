@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_caabn"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_e6c54"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yv7i"]
+atlas = ExtResource("1_caabn")
+region = Rect2(882, 418, 12, 12)
+
+[resource]
+script = ExtResource("2_e6c54")
+id = &"cave_crystal"
+display_name = "Azure Crystal"
+description = "Luminous cyan quartz crystal chipped from cave walls. Prized at shops and the Bloom Festival!"
+category = 4
+icon = SubResource("AtlasTexture_0yv7i")
+sell_price = 95

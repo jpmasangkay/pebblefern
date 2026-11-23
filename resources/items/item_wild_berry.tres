@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_tvia3"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_ri76d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avg2g"]
+atlas = ExtResource("1_tvia3")
+region = Rect2(768, 48, 16, 16)
+
+[resource]
+script = ExtResource("2_ri76d")
+id = &"wild_berry"
+display_name = "Bramble Berry"
+description = "Sweet woodland berries that restore Vitality."
+category = 4
+icon = SubResource("AtlasTexture_avg2g")
+sell_price = 18
+vitality_restore = 20.0

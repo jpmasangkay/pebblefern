@@ -1,0 +1,98 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/world/npc_house.gd" id="1_5ntq4"]
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="2_li7vr"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/VFX/Chimney Smoke/chimneysmoke_01_strip30.png" id="3_udmlh"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="4_tk2vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moglh"]
+size = Vector2(92, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8x4q2"]
+size = Vector2(22, 14)
+
+[sub_resource type="Gradient" id="Gradient_ohvv7"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_npb48"]
+gradient = SubResource("Gradient_ohvv7")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="LyraWoodlandCabin" type="Node2D" unique_id=1515746935]
+script = ExtResource("1_5ntq4")
+building_id = &"lyra_cabin"
+display_name = "Lyra's Cabin"
+interior_theme_id = &"lyra"
+door_spawn_offset = Vector2(32, 14)
+footprint_rect = Rect2(-4, -64, 104, 68)
+
+[node name="GroundShadows" type="TileMapLayer" parent="." unique_id=1870544055]
+z_index = -5
+position = Vector2(0, -64)
+tile_map_data = PackedByteArray("AAAAAAQAAAAOAAEAAAABAAQAAAAMAAEAAAACAAQAAAAMAAEAAAADAAQAAAAMAAEAAAAEAAQAAAAMAAEAAAAFAAQAAAAOAAEAABA=")
+tile_set = ExtResource("2_li7vr")
+
+[node name="Room1BuildingLayer" type="TileMapLayer" parent="." unique_id=1037670469]
+position = Vector2(0, -64)
+tile_map_data = PackedByteArray("AAABAAAAAAAaAB4AABACAAAAAAAaABoAAAADAAAAAAAbABoAAAAEAAAAAAAaAB4AAAAAAAEAAAAcABoAABABAAEAAAAaAB8AABACAAEAAAAYABkAAAADAAEAAAAZABkAAAAEAAEAAAAaAB8AAAAFAAEAAAAcABoAAAAAAAIAAAAUABwAAAABAAIAAAAVABwAAAACAAIAAAAWABwAAAADAAIAAAAWABwAABAEAAIAAAAVABwAABAFAAIAAAAUABwAABAAAAMAAAAUAB0AAAABAAMAAAAhAB0AAAACAAMAAAAhAB0AAAADAAMAAAAhAB0AAAAEAAMAAAAhAB0AAAAFAAMAAAAUAB0AABA=")
+tile_set = ExtResource("2_li7vr")
+
+[node name="Room1Decoration02Layer" type="TileMapLayer" parent="." unique_id=1122463127]
+z_index = 1
+position = Vector2(0, -64)
+tile_map_data = PackedByteArray("AAAEAAEAAAAcAAUAABABAAMAAAAOAAwAADACAAMAAAAOAAwAADA=")
+tile_set = ExtResource("2_li7vr")
+
+[node name="WallCollisions" type="StaticBody2D" parent="." unique_id=1299532523]
+collision_mask = 0
+
+[node name="SolidHull" type="CollisionShape2D" parent="WallCollisions" unique_id=593591724]
+position = Vector2(48, -27.2)
+shape = SubResource("RectangleShape2D_moglh")
+
+[node name="DoorPortal" type="Area2D" parent="." unique_id=489779187]
+collision_layer = 8
+collision_mask = 4
+
+[node name="DoorZone" type="CollisionShape2D" parent="DoorPortal" unique_id=1737571148]
+position = Vector2(32, 3.199997)
+shape = SubResource("RectangleShape2D_8x4q2")
+
+[node name="NightLights" type="Node2D" parent="." unique_id=39337092]
+
+[node name="Win1" type="PointLight2D" parent="NightLights" unique_id=234958394]
+position = Vector2(56, -8)
+color = Color(1, 0.78, 0.44, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_npb48")
+texture_scale = 0.75
+
+[node name="Win2" type="PointLight2D" parent="NightLights" unique_id=1618030787]
+position = Vector2(72, -8)
+color = Color(1, 0.78, 0.44, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_npb48")
+texture_scale = 0.75
+
+[node name="PorchLight" type="PointLight2D" parent="NightLights" unique_id=998168587]
+position = Vector2(32, -3.2000008)
+color = Color(1, 0.74, 0.38, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_npb48")
+texture_scale = 1.05
+
+[node name="ChimneySmoke" type="Sprite2D" parent="." unique_id=2104727486]
+z_index = 2
+position = Vector2(71, -45)
+texture = ExtResource("3_udmlh")
+centered = false
+offset = Vector2(-7.5, -36)
+hframes = 30
+script = ExtResource("4_tk2vu")
+frame_rate = 10.0

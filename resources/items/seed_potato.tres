@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/seeds_generic.png" id="1_wtn1t"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/potato_05.png" id="2_hmd5h"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_ffxxl"]
+
+[resource]
+script = ExtResource("3_ffxxl")
+id = &"seed_potato"
+display_name = "Potato Seeds"
+description = "Plant on tilled soil. Matures in 6 days."
+category = 1
+icon = ExtResource("1_wtn1t")
+overlay_icon = ExtResource("2_hmd5h")
+buy_price = 50
+sell_price = 25
+crop_id = &"potato"

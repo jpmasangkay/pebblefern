@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/kale_05.png" id="1_k01f5"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_6xho5"]
+
+[resource]
+script = ExtResource("2_6xho5")
+id = &"crop_kale"
+display_name = "Kale"
+description = "Freshly harvested Kale from Solstice Sanctuary."
+category = 2
+icon = ExtResource("1_k01f5")
+buy_price = 220
+sell_price = 110
+vitality_restore = 28.0
+crop_id = &"kale"

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="NpcData" format=3]
+
+[ext_resource type="Script" path="res://resources/npc_data.gd" id="1_cvdfc"]
+
+[resource]
+script = ExtResource("1_cvdfc")
+npc_id = &"lyra"
+display_name = "Lyra"
+role_title = "Highland Forager & Herbalist"
+bio = "Forages wild berries by the Highland Spring."
+hair_style = &"longhair"
+hair_tint = Color(0.95, 0.78, 0.65, 1)
+home_building_id = &"lyra_cabin"
+loved_items = Array[StringName]([&"wild_berry", &"crop_radish", &"crop_beetroot"])
+liked_items = Array[StringName]([&"wood", &"crop_kale", &"crop_sunflower"])
+disliked_items = Array[StringName]([&"copper_bar", &"iron_bar"])
+liked_categories = PackedInt32Array()
+morning_lines = PackedStringArray("Pine needles smell sweetest just after dawn! Did you climb the cliff ladder all the way up?", "Check the bushes beneath the northern pines — fresh Wild Berries ripen every few days!")
+afternoon_lines = PackedStringArray("Listen to the Highland Waterfall spill down into the valley... the whole island drinks from this spring.", "Cast a line in the Highland Spring sometime — shy Spring Koi and Mountain Minnows glide right below the lilies.")
+evening_lines = PackedStringArray("I always climb down the wooden ladder at dusk to catch up with Maren and everyone in the plaza.", "Starlight over Bramblebrook Plaza feels almost as peaceful as my pine grove.")
+season_lines = PackedStringArray("Bloom wakes every fern and wild berry shoot across the northern ridge!", "Sun filters through the pine canopy like warm honey — crisp radishes taste heavenly in this weather.", "Harvest tints the highland moss gold and crimson. Best season for earthy beetroot tea!", "Frost hushes the woods until you can hear every single droplet of the waterfall.")
+heart3_lines = PackedStringArray("The woodland birds don\'t even scatter when you climb the ladder anymore — they recognize a friend!", "I dried a bundle of highland mint for your farmhouse next time you visit.")
+heart6_lines = PackedStringArray("I used to spend weeks alone in the pines, but sharing the island with you has made every season warmer.", "Whenever you need quiet air or sweet berries, my hearth in the highlands is always lit for you.")
+gift_loved_line = "Oh, what a jewel of the earth! Crisp, fragrant, and my very favorite — thank you from the heart!"
+gift_liked_line = "Lovely! This fits right into my woodland pantry — thank you so much!"
+gift_neutral_line = "Thank you for bringing this all the way over!"
+gift_disliked_line = "Ooh, cold forged metal feels so heavy compared to forest herbs... thank you though."

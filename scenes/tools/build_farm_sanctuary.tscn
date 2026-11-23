@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/tools/build_farm_sanctuary.gd" id="1"]
+
+[node name="BuildFarmSanctuary" type="Node"]
+script = ExtResource("1")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeData" format=3]
+
+[ext_resource type="Script" path="res://resources/recipe_data.gd" id="1_3enet"]
+
+[resource]
+script = ExtResource("1_3enet")
+id = &"recipe_fence"
+display_name = "Wooden Fence"
+description = "Craft 2 wooden fence segments to frame your sanctuary garden."
+output_item_id = &"place_fence"
+output_count = 2
+ingredient_ids = Array[StringName]([&"wood"])
+ingredient_counts = PackedInt32Array(2)

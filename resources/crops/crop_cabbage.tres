@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/cabbage_05.png" id="1_78klm"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_twtyl"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/cabbage_00.png" id="3_poc1e"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/cabbage_01.png" id="4_is0xk"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/cabbage_02.png" id="5_f4ndx"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/cabbage_03.png" id="6_32dld"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/cabbage_04.png" id="7_kcwfn"]
+
+[resource]
+script = ExtResource("2_twtyl")
+crop_id = &"cabbage"
+display_name = "Cabbage"
+botanical_name = "Brassica capitata"
+seed_item_id = &"seed_cabbage"
+harvest_item_id = &"crop_cabbage"
+seasons = PackedInt32Array(1)
+days_to_mature = 9
+stage_textures = Array[Texture2D]([ExtResource("3_poc1e"), ExtResource("4_is0xk"), ExtResource("5_f4ndx"), ExtResource("6_32dld"), ExtResource("7_kcwfn")])
+harvest_icon = ExtResource("1_78klm")

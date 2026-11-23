@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_05.png" id="1_c5xmh"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_n6q5d"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_00.png" id="3_0csk2"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_01.png" id="4_dpqrx"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_02.png" id="5_vflll"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_03.png" id="6_jiq6b"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/carrot_04.png" id="7_7o5rj"]
+
+[resource]
+script = ExtResource("2_n6q5d")
+crop_id = &"carrot"
+display_name = "Carrot"
+botanical_name = "Daucus carota"
+seed_item_id = &"seed_carrot"
+harvest_item_id = &"crop_carrot"
+seasons = PackedInt32Array(0)
+stage_textures = Array[Texture2D]([ExtResource("3_0csk2"), ExtResource("4_dpqrx"), ExtResource("5_vflll"), ExtResource("6_jiq6b"), ExtResource("7_7o5rj")])
+harvest_icon = ExtResource("1_c5xmh")

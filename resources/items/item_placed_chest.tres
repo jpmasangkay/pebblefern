@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_6unl0"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_0t5ur"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6unl0"]
+atlas = ExtResource("1_6unl0")
+region = Rect2(608, 480, 16, 16)
+
+[resource]
+script = ExtResource("2_0t5ur")
+id = &"place_chest"
+display_name = "Storage Chest"
+description = "Sturdy 16-slot persistent storage chest. Place on the sanctuary to store crops, tools, and bars."
+category = 5
+icon = SubResource("AtlasTexture_6unl0")
+max_stack = 10
+sell_price = 40
+placeable_object_id = &"chest"

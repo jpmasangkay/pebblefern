@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_05.png" id="1_4ytuh"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_yfblh"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_00.png" id="3_y462t"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_01.png" id="4_bcmnu"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_02.png" id="5_hsawc"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_03.png" id="6_ioqga"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/radish_04.png" id="7_vn8bb"]
+
+[resource]
+script = ExtResource("2_yfblh")
+crop_id = &"radish"
+display_name = "Radish"
+botanical_name = "Raphanus sativus"
+seed_item_id = &"seed_radish"
+harvest_item_id = &"crop_radish"
+seasons = PackedInt32Array(1)
+days_to_mature = 6
+stage_textures = Array[Texture2D]([ExtResource("3_y462t"), ExtResource("4_bcmnu"), ExtResource("5_hsawc"), ExtResource("6_ioqga"), ExtResource("7_vn8bb")])
+harvest_icon = ExtResource("1_4ytuh")

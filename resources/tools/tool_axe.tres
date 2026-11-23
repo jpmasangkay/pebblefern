@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ToolData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/axe.png" id="1_fwgx2"]
+[ext_resource type="Script" path="res://resources/tool_data.gd" id="2_4ygrm"]
+
+[resource]
+script = ExtResource("2_4ygrm")
+tool_kind = 2
+player_anim_state = 5
+id = &"tool_axe"
+display_name = "Woodsman Axe"
+description = "Chops trees and stumps into sturdy timber."
+category = 0
+icon = ExtResource("1_fwgx2")
+max_stack = 1

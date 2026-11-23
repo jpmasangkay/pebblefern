@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Animals/spr_deco_duck_01_strip4.png" id="1_23fet"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="2_knr6j"]
+
+[node name="WaterDuck" type="Node2D" unique_id=465791896]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=333265404]
+texture = ExtResource("1_23fet")
+hframes = 4
+script = ExtResource("2_knr6j")
+frame_rate = 4.5
+random_start_phase = true

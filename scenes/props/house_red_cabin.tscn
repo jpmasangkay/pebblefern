@@ -1,0 +1,131 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/world/npc_house.gd" id="1_xbc33"]
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="2_rh0ud"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/VFX/Chimney Smoke/chimneysmoke_01_strip30.png" id="3_xl5q4"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="4_oivdh"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="5_ypa1o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_al2u5"]
+size = Vector2(78, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kweo"]
+size = Vector2(10, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b816b"]
+size = Vector2(10, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hbb4"]
+size = Vector2(22, 14)
+
+[sub_resource type="Gradient" id="Gradient_ddrar"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2t8ex"]
+gradient = SubResource("Gradient_ddrar")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uijbx"]
+atlas = ExtResource("5_ypa1o")
+region = Rect2(608, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub5k3"]
+atlas = ExtResource("5_ypa1o")
+region = Rect2(624, 256, 16, 16)
+
+[node name="BramCoastalCabin" type="Node2D" unique_id=1783323653]
+script = ExtResource("1_xbc33")
+building_id = &"bram_cabin"
+display_name = "Bram's Cabin"
+interior_theme_id = &"bram"
+door_spawn_offset = Vector2(24, 14)
+footprint_rect = Rect2(-4, -80, 88, 84)
+
+[node name="GroundShadows" type="TileMapLayer" parent="." unique_id=1780291603]
+z_index = -5
+position = Vector2(0, -80)
+tile_map_data = PackedByteArray("AAAAAAUAAAAOAAEAAAABAAUAAAAMAAEAAAACAAUAAAAMAAEAAAADAAUAAAAMAAEAAAAEAAUAAAAOAAEAABA=")
+tile_set = ExtResource("2_rh0ud")
+
+[node name="Room1BuildingLayer" type="TileMapLayer" parent="." unique_id=657789997]
+position = Vector2(0, -80)
+tile_map_data = PackedByteArray("AAAAAAAAAAARACEAABABAAAAAAAQACEAAAACAAAAAAAQACEAAAADAAAAAAAQACEAAAAEAAAAAAARACEAAAAAAAEAAAAPACQAAAABAAEAAAAQACQAAAACAAEAAAAUACIAAAADAAEAAAAQACQAAAAEAAEAAAARACQAAAAAAAIAAAAPACQAAAABAAIAAAAQACQAAAACAAIAAAAQACQAAAADAAIAAAAQACQAAAAEAAIAAAARACQAAAAAAAMAAAAPACUAAAABAAMAAAAQACYAAAACAAMAAAAQACYAAAADAAMAAAAQACYAAAAEAAMAAAARACUAAAAAAAQAAAAPACYAAAABAAQAAAAMAAwAAAACAAQAAAAhACUAAAADAAQAAAAhACUAAAAEAAQAAAAPACYAABA=")
+tile_set = ExtResource("2_rh0ud")
+
+[node name="Room1Decoration02Layer" type="TileMapLayer" parent="." unique_id=750664563]
+z_index = 1
+position = Vector2(0, -80)
+tile_map_data = PackedByteArray("AAABAAAAAAAdAAUAAAABAAMAAAAOAAwAAAACAAMAAAAOAAwAAAADAAMAAAAOAAwAAAAEAAMAAAAIAA0AAAABAAQAAAAkABsAAAACAAQAAAAIAA0AAAAEAAQAAAAIAA0AAAA=")
+tile_set = ExtResource("2_rh0ud")
+
+[node name="WallCollisions" type="StaticBody2D" parent="." unique_id=690857853]
+collision_mask = 0
+
+[node name="SolidHull" type="CollisionShape2D" parent="WallCollisions" unique_id=2139616500]
+position = Vector2(40, -35.2)
+shape = SubResource("RectangleShape2D_al2u5")
+
+[node name="RightBarrelCol" type="CollisionShape2D" parent="WallCollisions" unique_id=1232363395]
+position = Vector2(86.4, -4)
+shape = SubResource("RectangleShape2D_6kweo")
+
+[node name="LeftBarrelCol" type="CollisionShape2D" parent="WallCollisions" unique_id=212852046]
+position = Vector2(-6.4, -4)
+shape = SubResource("RectangleShape2D_b816b")
+
+[node name="DoorPortal" type="Area2D" parent="." unique_id=1160535628]
+collision_layer = 8
+collision_mask = 4
+
+[node name="DoorZone" type="CollisionShape2D" parent="DoorPortal" unique_id=513459360]
+position = Vector2(24, 3.199997)
+shape = SubResource("RectangleShape2D_1hbb4")
+
+[node name="NightLights" type="Node2D" parent="." unique_id=1298442978]
+
+[node name="Win1" type="PointLight2D" parent="NightLights" unique_id=777804105]
+position = Vector2(40, -8)
+color = Color(1, 0.78, 0.44, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_2t8ex")
+texture_scale = 0.75
+
+[node name="Win2" type="PointLight2D" parent="NightLights" unique_id=1462957020]
+position = Vector2(56, -8)
+color = Color(1, 0.78, 0.44, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_2t8ex")
+texture_scale = 0.75
+
+[node name="PorchLight" type="PointLight2D" parent="NightLights" unique_id=1933934852]
+position = Vector2(24, -3.199997)
+color = Color(1, 0.74, 0.38, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_2t8ex")
+texture_scale = 1.05
+
+[node name="ChimneySmoke" type="Sprite2D" parent="." unique_id=1615032931]
+z_index = 2
+position = Vector2(24, -78)
+texture = ExtResource("3_xl5q4")
+centered = false
+offset = Vector2(-7.5, -36)
+hframes = 30
+script = ExtResource("4_oivdh")
+frame_rate = 10.0
+
+[node name="CoastalWaterBarrel" type="Sprite2D" parent="." unique_id=224342468]
+position = Vector2(78, -14.400002)
+texture = SubResource("AtlasTexture_uijbx")
+centered = false
+
+[node name="CoastalClosedBarrel" type="Sprite2D" parent="." unique_id=1627062605]
+position = Vector2(-14, -14.400002)
+texture = SubResource("AtlasTexture_ub5k3")
+centered = false

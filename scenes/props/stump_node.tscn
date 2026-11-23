@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/stump_node.gd" id="1_s1bw0"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_g3vak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3fe5"]
+atlas = ExtResource("2_g3vak")
+region = Rect2(496, 80, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqu3l"]
+size = Vector2(12, 8)
+
+[node name="StumpNode" type="StaticBody2D" unique_id=212148867]
+collision_mask = 0
+script = ExtResource("1_s1bw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1413357412]
+texture = SubResource("AtlasTexture_i3fe5")
+offset = Vector2(0, -5)
+
+[node name="StumpCollider" type="CollisionShape2D" parent="." unique_id=1082281860]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_xqu3l")

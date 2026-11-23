@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/beetroot_05.png" id="1_0c0yq"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_p0kyx"]
+
+[resource]
+script = ExtResource("2_p0kyx")
+id = &"crop_beetroot"
+display_name = "Beetroot"
+description = "Freshly harvested Beetroot from Solstice Sanctuary."
+category = 2
+icon = ExtResource("1_0c0yq")
+buy_price = 200
+sell_price = 100
+vitality_restore = 26.0
+crop_id = &"beetroot"

@@ -1,0 +1,40 @@
+[gd_scene format=4]
+
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="1_m3bxq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1gu0y"]
+size = Vector2(80, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oskuy"]
+size = Vector2(80, 4)
+
+[node name="WoodenBridge" type="Node2D" unique_id=884726841]
+
+[node name="BridgePilings" type="TileMapLayer" parent="." unique_id=574892578]
+z_index = -6
+position = Vector2(-8, -16)
+tile_map_data = PackedByteArray("AAD//wIAAAAlAAUAAAD//wMAAAAlAAIAAAABAAIAAAAlAAUAAAABAAMAAAAlAAIAAAA=")
+tile_set = ExtResource("1_m3bxq")
+
+[node name="BridgeDeck" type="TileMapLayer" parent="." unique_id=942813110]
+z_index = -5
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD+////AAAnAAsAAAD+/wAAAAAnAAwAAAD+/wEAAAAnAA0AAAD/////AAAoAAsAABD//wAAAAAoAAwAABD//wEAAAAoAA0AABAAAP//AAAoAAsAAAAAAAAAAAAoAAwAAAAAAAEAAAAoAA0AAAABAP//AAAoAAsAABABAAAAAAAoAAwAABABAAEAAAAoAA0AABACAP//AAAnAAsAABACAAAAAAAnAAwAABACAAEAAAAnAA0AABA=")
+tile_set = ExtResource("1_m3bxq")
+
+[node name="BridgeRails" type="TileMapLayer" parent="." unique_id=468821293]
+z_index = -4
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD+////AAAqAAIAABD+/wEAAAAmAAAAAAD/////AAAnAAIAAAD//wEAAAAnAAAAAAAAAP//AAAnAAIAAAAAAAEAAAAnAAAAAAABAP//AAAnAAIAAAABAAEAAAAnAAAAAAACAP//AAAqAAIAAAACAAEAAAAmAAAAABA=")
+tile_set = ExtResource("1_m3bxq")
+
+[node name="RailColliders" type="StaticBody2D" parent="." unique_id=1362556262]
+collision_mask = 0
+
+[node name="TopRailCollider" type="CollisionShape2D" parent="RailColliders" unique_id=1601908544]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_1gu0y")
+
+[node name="BottomRailCollider" type="CollisionShape2D" parent="RailColliders" unique_id=1709786458]
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_oskuy")

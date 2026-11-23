@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_57wio"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_hxnx4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57wio"]
+atlas = ExtResource("1_57wio")
+region = Rect2(624, 32, 16, 16)
+
+[resource]
+script = ExtResource("2_hxnx4")
+id = &"place_fence"
+display_name = "Wooden Fence"
+description = "Classic wooden farm fence to border garden plots and walkways."
+category = 5
+icon = SubResource("AtlasTexture_57wio")
+sell_price = 5
+placeable_object_id = &"fence"

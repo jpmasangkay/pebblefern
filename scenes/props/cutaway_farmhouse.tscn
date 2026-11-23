@@ -1,0 +1,192 @@
+[gd_scene format=4]
+
+[ext_resource type="Script" path="res://scripts/world/cutaway_farmhouse.gd" id="1_41kwg"]
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="2_j26qh"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/VFX/Chimney Smoke/chimneysmoke_01_strip30.png" id="3_vy28l"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="4_xlieu"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="5_njjfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y2hd"]
+atlas = ExtResource("5_njjfc")
+region = Rect2(624, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwie2"]
+atlas = ExtResource("5_njjfc")
+region = Rect2(624, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlaln"]
+atlas = ExtResource("5_njjfc")
+region = Rect2(608, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfvgf"]
+atlas = ExtResource("5_njjfc")
+region = Rect2(784, 48, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5ry7"]
+atlas = ExtResource("5_njjfc")
+region = Rect2(816, 304, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ts77f"]
+size = Vector2(108, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac111"]
+size = Vector2(14, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mn8m8"]
+size = Vector2(14, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lhp4"]
+size = Vector2(22, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orsp8"]
+size = Vector2(16, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxqej"]
+size = Vector2(14, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gi11c"]
+size = Vector2(22, 14)
+
+[sub_resource type="Gradient" id="Gradient_6m51u"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.45, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 0.92, 0.72, 0.45, 1, 0.8, 0.5, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o7tty"]
+gradient = SubResource("Gradient_6m51u")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[node name="CutawayFarmhouse" type="Node2D" unique_id=1715918767]
+script = ExtResource("1_41kwg")
+
+[node name="GroundShadows" type="TileMapLayer" parent="." unique_id=393230513]
+z_index = -5
+position = Vector2(-8, -96)
+tile_map_data = PackedByteArray("AAAAAAYAAAASAAEAAAABAAYAAAAMAAEAAAACAAYAAAAMAAEAAAADAAYAAAAMAAEAAAAEAAYAAAAMAAEAAAAFAAYAAAAMAAEAAAAGAAYAAAASAAEAABA=")
+tile_set = ExtResource("2_j26qh")
+
+[node name="RoofLayer" type="Node2D" parent="." unique_id=1423443709]
+
+[node name="Room1BuildingLayer" type="TileMapLayer" parent="RoofLayer" unique_id=677379851]
+position = Vector2(-8, -96)
+tile_map_data = PackedByteArray("AAABAAAAAAAVAA4AAAACAAAAAAAWAA4AAAADAAAAAAAXABYAAAAEAAAAAAAWAA4AABAFAAAAAAAVAA4AABAAAAEAAAAcABcAABABAAEAAAAVAA8AAAACAAEAAAAWAA8AAAADAAEAAAASAAkAAAAEAAEAAAAWAA8AABAFAAEAAAAVAA8AABAGAAEAAAAcABcAAAAAAAIAAAAcAAsAABABAAIAAAAVAAsAAAACAAIAAAAcAAkAAAADAAIAAAASAAkAAAAEAAIAAAAcAAkAABAFAAIAAAAVAAsAABAGAAIAAAAcAAsAAAAAAAMAAAAcAAsAABABAAMAAAAcAAkAAAACAAMAAAAWAAsAAAADAAMAAAAYAAsAAAAEAAMAAAAWAAsAABAFAAMAAAAVAAsAABAGAAMAAAAcAAsAAAAAAAQAAAAUAAwAAAABAAQAAAAVAAwAAAACAAQAAAAWABQAAAADAAQAAAAQAAwAAAAEAAQAAAAWABQAABAFAAQAAAAVAAwAABAGAAQAAAAUAAwAABAAAAUAAAAUABUAAAABAAUAAAAhABUAAAACAAUAAAAhABUAAAADAAUAAAAQAA0AAAAEAAUAAAAhABUAAAAFAAUAAAAhABUAAAAGAAUAAAAcABUAAAA=")
+tile_set = ExtResource("2_j26qh")
+
+[node name="Room1Decoration02Layer" type="TileMapLayer" parent="RoofLayer" unique_id=129754323]
+z_index = 1
+position = Vector2(-8, -96)
+tile_map_data = PackedByteArray("AAAEAAEAAAAcAAUAABACAAQAAAAPABUAAAAEAAQAAAAPABUAABAGAAQAAAA0AB8AAAABAAUAAAAxACEAAAACAAUAAAAPABYAAAADAAUAAAAnABsAAAAEAAUAAAAPABYAABAFAAUAAAAxACEAAAAGAAUAAAA0ACAAAAABAAYAAAAxACIAAAAFAAYAAAAxACIAAAA=")
+tile_set = ExtResource("2_j26qh")
+
+[node name="ChimneySmoke" type="Sprite2D" parent="RoofLayer" unique_id=272672639]
+z_index = 2
+position = Vector2(63, -77)
+texture = ExtResource("3_vy28l")
+centered = false
+offset = Vector2(-7.5, -36)
+hframes = 30
+script = ExtResource("4_xlieu")
+frame_rate = 10.0
+
+[node name="ExteriorYardProps" type="Node2D" parent="." unique_id=370755113]
+
+[node name="YardBarrelLeft" type="Sprite2D" parent="ExteriorYardProps" unique_id=239977548]
+position = Vector2(-36, -20)
+texture = SubResource("AtlasTexture_1y2hd")
+centered = false
+
+[node name="YardBarrelRight" type="Sprite2D" parent="ExteriorYardProps" unique_id=2035162358]
+position = Vector2(-23, -20)
+texture = SubResource("AtlasTexture_jwie2")
+centered = false
+
+[node name="YardBarrelWater" type="Sprite2D" parent="ExteriorYardProps" unique_id=565059108]
+position = Vector2(-30, -10)
+texture = SubResource("AtlasTexture_tlaln")
+centered = false
+
+[node name="YardBerryBush" type="Sprite2D" parent="ExteriorYardProps" unique_id=1793296397]
+position = Vector2(-60, -22)
+texture = SubResource("AtlasTexture_rfvgf")
+centered = false
+
+[node name="YardClayJugs" type="Sprite2D" parent="ExteriorYardProps" unique_id=1547184941]
+position = Vector2(102, -18)
+texture = SubResource("AtlasTexture_f5ry7")
+centered = false
+
+[node name="WallCollisions" type="StaticBody2D" parent="." unique_id=733856697]
+collision_mask = 0
+
+[node name="SolidMainWingHull" type="CollisionShape2D" parent="WallCollisions" unique_id=567544046]
+position = Vector2(48, -41.6)
+shape = SubResource("RectangleShape2D_ts77f")
+
+[node name="LeftBenchCollider" type="CollisionShape2D" parent="WallCollisions" unique_id=953026241]
+position = Vector2(16, 0)
+shape = SubResource("RectangleShape2D_ac111")
+
+[node name="RightBenchCollider" type="CollisionShape2D" parent="WallCollisions" unique_id=1258705035]
+position = Vector2(80, 0)
+shape = SubResource("RectangleShape2D_mn8m8")
+
+[node name="YardBarrelsCollider" type="CollisionShape2D" parent="WallCollisions" unique_id=1885895915]
+position = Vector2(-22, -4.800003)
+shape = SubResource("RectangleShape2D_2lhp4")
+
+[node name="YardBushCollider" type="CollisionShape2D" parent="WallCollisions" unique_id=2069625652]
+position = Vector2(-43.2, -4.800003)
+shape = SubResource("RectangleShape2D_orsp8")
+
+[node name="YardJugsCollider" type="CollisionShape2D" parent="WallCollisions" unique_id=47328906]
+position = Vector2(112.8, -3.199997)
+shape = SubResource("RectangleShape2D_wxqej")
+
+[node name="DoorPortal" type="Area2D" parent="." unique_id=346053722]
+collision_layer = 8
+collision_mask = 4
+
+[node name="DoorZone" type="CollisionShape2D" parent="DoorPortal" unique_id=726865215]
+position = Vector2(48, 4)
+shape = SubResource("RectangleShape2D_gi11c")
+
+[node name="NightLights" type="Node2D" parent="." unique_id=1596744422]
+
+[node name="WindowLight1" type="PointLight2D" parent="NightLights" unique_id=50827426]
+position = Vector2(16, -8)
+color = Color(1, 0.78, 0.42, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_o7tty")
+texture_scale = 0.75
+
+[node name="WindowLight2" type="PointLight2D" parent="NightLights" unique_id=1724795427]
+position = Vector2(32, -8)
+color = Color(1, 0.78, 0.42, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_o7tty")
+texture_scale = 0.75
+
+[node name="WindowLight3" type="PointLight2D" parent="NightLights" unique_id=2108186602]
+position = Vector2(64, -8)
+color = Color(1, 0.78, 0.42, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_o7tty")
+texture_scale = 0.75
+
+[node name="WindowLight4" type="PointLight2D" parent="NightLights" unique_id=1881375802]
+position = Vector2(80, -8)
+color = Color(1, 0.78, 0.42, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_o7tty")
+texture_scale = 0.75
+
+[node name="PorchLight" type="PointLight2D" parent="NightLights" unique_id=825986899]
+position = Vector2(48, -3.199997)
+color = Color(1, 0.74, 0.38, 1)
+energy = 0.0
+texture = SubResource("GradientTexture2D_o7tty")
+texture_scale = 1.15

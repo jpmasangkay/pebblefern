@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Plants/spr_deco_mushroom_blue_01_strip4.png" id="1_ps06y"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="2_p0hna"]
+
+[node name="MushroomBlue" type="Node2D" unique_id=607762756]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1224768679]
+texture = ExtResource("1_ps06y")
+offset = Vector2(0, -3)
+hframes = 4
+script = ExtResource("2_p0hna")
+frame_rate = 3.5

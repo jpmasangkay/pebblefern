@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/berry_bush.gd" id="1_v84ce"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_wh6e2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsttu"]
+atlas = ExtResource("2_wh6e2")
+region = Rect2(784, 48, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5fng"]
+size = Vector2(14, 8)
+
+[node name="BerryBush" type="StaticBody2D" unique_id=885043381]
+collision_mask = 0
+script = ExtResource("1_v84ce")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=257631865]
+texture = SubResource("AtlasTexture_vsttu")
+offset = Vector2(0, -8)
+
+[node name="BushCollider" type="CollisionShape2D" parent="." unique_id=729890532]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_n5fng")

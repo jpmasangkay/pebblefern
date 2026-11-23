@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_05.png" id="1_4wt7r"]
+[ext_resource type="Script" path="res://resources/crop_data.gd" id="2_liiwg"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_00.png" id="3_cd5ly"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_01.png" id="4_51dg4"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_02.png" id="5_4dg0i"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_03.png" id="6_nm32t"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/parsnip_04.png" id="7_84q4v"]
+
+[resource]
+script = ExtResource("2_liiwg")
+crop_id = &"parsnip"
+display_name = "Parsnip"
+botanical_name = "Pastinaca sativa"
+seed_item_id = &"seed_parsnip"
+harvest_item_id = &"crop_parsnip"
+seasons = PackedInt32Array(0)
+stage_textures = Array[Texture2D]([ExtResource("3_cd5ly"), ExtResource("4_51dg4"), ExtResource("5_4dg0i"), ExtResource("6_nm32t"), ExtResource("7_84q4v")])
+harvest_icon = ExtResource("1_4wt7r")

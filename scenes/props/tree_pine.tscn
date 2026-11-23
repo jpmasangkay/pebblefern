@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Plants/spr_deco_tree_02_strip4.png" id="1_85q72"]
+[ext_resource type="Script" path="res://scripts/world/strip_sprite_2d.gd" id="2_lgkod"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8uot"]
+size = Vector2(10, 8)
+
+[node name="TreePine" type="StaticBody2D" unique_id=461453285]
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=44422424]
+texture = ExtResource("1_85q72")
+offset = Vector2(0, -17)
+hframes = 4
+script = ExtResource("2_lgkod")
+frame_rate = 3.0
+random_start_phase = true
+
+[node name="TrunkCollider" type="CollisionShape2D" parent="." unique_id=2080501072]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_v8uot")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_32h2l"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/UI/hammer.png" id="2_m3r68"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_u7may"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_32h2l"]
+atlas = ExtResource("1_32h2l")
+region = Rect2(880, 448, 16, 16)
+
+[resource]
+script = ExtResource("3_u7may")
+id = &"copper_bar"
+display_name = "Copper Bar"
+description = "Warm copper ingot smelted from Rock & Wood in a Stone Furnace. Used for Kaelen's upgrades."
+icon = SubResource("AtlasTexture_32h2l")
+overlay_icon = ExtResource("2_m3r68")
+sell_price = 65

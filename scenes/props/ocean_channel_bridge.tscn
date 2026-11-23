@@ -1,0 +1,40 @@
+[gd_scene format=4]
+
+[ext_resource type="TileSet" path="res://resources/sunnyside_tileset.tres" id="1_qf083"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da2iq"]
+size = Vector2(112, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrql4"]
+size = Vector2(112, 4)
+
+[node name="OceanChannelBridge" type="Node2D" unique_id=1179134668]
+
+[node name="BridgePilings" type="TileMapLayer" parent="." unique_id=222324865]
+z_index = -6
+position = Vector2(-8, -16)
+tile_map_data = PackedByteArray("AAD//wIAAAAlAAUAAAD//wMAAAAlAAIAAAABAAIAAAAlAAUAAAABAAMAAAAlAAIAAAA=")
+tile_set = ExtResource("1_qf083")
+
+[node name="BridgeDeck" type="TileMapLayer" parent="." unique_id=997435536]
+z_index = -5
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD9////AAAnAAsAAAD9/wAAAAAnAAwAAAD9/wEAAAAnAA0AAAD+////AAAoAAsAAAD+/wAAAAAoAAwAAAD+/wEAAAAoAA0AAAD/////AAAoAAsAABD//wAAAAAoAAwAABD//wEAAAAoAA0AABAAAP//AAAoAAsAAAAAAAAAAAAoAAwAAAAAAAEAAAAoAA0AAAABAP//AAAoAAsAABABAAAAAAAoAAwAABABAAEAAAAoAA0AABACAP//AAAoAAsAAAACAAAAAAAoAAwAAAACAAEAAAAoAA0AAAADAP//AAAnAAsAABADAAAAAAAnAAwAABADAAEAAAAnAA0AABA=")
+tile_set = ExtResource("1_qf083")
+
+[node name="BridgeRails" type="TileMapLayer" parent="." unique_id=1126965810]
+z_index = -4
+position = Vector2(-8, -8)
+tile_map_data = PackedByteArray("AAD9////AAAqAAIAABD9/wEAAAAmAAAAAAD+////AAAnAAIAAAD+/wEAAAAnAAAAAAD/////AAAnAAIAAAD//wEAAAAnAAAAAAAAAP//AAAnAAIAAAAAAAEAAAAnAAAAAAABAP//AAAnAAIAAAABAAEAAAAnAAAAAAACAP//AAAnAAIAAAACAAEAAAAnAAAAAAADAP//AAAqAAIAAAADAAEAAAAmAAAAABA=")
+tile_set = ExtResource("1_qf083")
+
+[node name="RailColliders" type="StaticBody2D" parent="." unique_id=1633323995]
+collision_mask = 0
+
+[node name="TopRail" type="CollisionShape2D" parent="RailColliders" unique_id=425886858]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_da2iq")
+
+[node name="BottomRail" type="CollisionShape2D" parent="RailColliders" unique_id=921372298]
+position = Vector2(0, 22)
+shape = SubResource("RectangleShape2D_qrql4")

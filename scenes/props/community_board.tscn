@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/world_interactable.gd" id="1_bpnbr"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="2_oknx1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lm5t"]
+atlas = ExtResource("2_oknx1")
+region = Rect2(752, 208, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs4fq"]
+atlas = ExtResource("2_oknx1")
+region = Rect2(848, 512, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41jne"]
+size = Vector2(18, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnln5"]
+size = Vector2(44, 32)
+
+[node name="CommunityBoard" type="StaticBody2D" unique_id=827775678]
+collision_mask = 0
+script = ExtResource("1_bpnbr")
+interactable_id = &"community_board"
+prompt_text = "[E] Community Board"
+toast_message = "Community Board — Village Quests arrive in Phase 5!"
+
+[node name="BoardSprite" type="Sprite2D" parent="." unique_id=1905619566]
+position = Vector2(0, -6)
+texture = SubResource("AtlasTexture_6lm5t")
+
+[node name="BoardFlowers" type="Sprite2D" parent="." unique_id=272213054]
+position = Vector2(-13, -2)
+texture = SubResource("AtlasTexture_fs4fq")
+
+[node name="BoardCollider" type="CollisionShape2D" parent="." unique_id=532862942]
+position = Vector2(-3, -1)
+shape = SubResource("RectangleShape2D_41jne")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1363152708]
+collision_layer = 8
+collision_mask = 4
+
+[node name="InteractShape" type="CollisionShape2D" parent="InteractArea" unique_id=2084943154]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_tnln5")

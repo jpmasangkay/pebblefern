@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/Crops/rock.png" id="1_hgbh6"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_hfpwl"]
+
+[resource]
+script = ExtResource("2_hfpwl")
+id = &"stone"
+display_name = "Stone"
+description = "Solid grey quarry stone useful for paths, furnaces, and building."
+icon = ExtResource("1_hgbh6")
+sell_price = 5

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_eqmcp"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_ssc3p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uvln4"]
+atlas = ExtResource("1_eqmcp")
+region = Rect2(882, 354, 12, 12)
+
+[resource]
+script = ExtResource("2_ssc3p")
+id = &"iron_ore"
+display_name = "Iron Ore"
+description = "Heavy subterranean iron ore from deeper mine floors. Smelt 3 with 1 Wood into an Iron Bar!"
+icon = SubResource("AtlasTexture_uvln4")
+sell_price = 35

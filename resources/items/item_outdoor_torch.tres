@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_5kpbx"]
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Elements/VFX/Fire/spr_deco_fire_01_strip4.png" id="2_tmoa1"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="3_fftpb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kpbx"]
+atlas = ExtResource("1_5kpbx")
+region = Rect2(640, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmoa1"]
+atlas = ExtResource("2_tmoa1")
+region = Rect2(0, 0, 5, 10)
+
+[resource]
+script = ExtResource("3_fftpb")
+id = &"place_torch"
+display_name = "Outdoor Torch"
+description = "Warm lantern post with animated flame that illuminates your farm at dusk and night."
+category = 5
+icon = SubResource("AtlasTexture_5kpbx")
+overlay_icon = SubResource("AtlasTexture_tmoa1")
+max_stack = 50
+sell_price = 10
+placeable_object_id = &"torch"

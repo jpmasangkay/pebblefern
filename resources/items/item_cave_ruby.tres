@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_ASSET_PACK_V2.1/Sunnyside_World_Assets/Tileset/spr_tileset_sunnysideworld_16px.png" id="1_x6ctf"]
+[ext_resource type="Script" path="res://resources/item_data.gd" id="2_ddj5c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sn7cv"]
+atlas = ExtResource("1_x6ctf")
+region = Rect2(882, 354, 12, 12)
+
+[resource]
+script = ExtResource("2_ddj5c")
+id = &"cave_ruby"
+display_name = "Ember Gem"
+description = "Rare ruby-red crystal from Floor 3 of Pebblefern Mine. Commands top Sunbursts & festival glory!"
+category = 4
+icon = SubResource("AtlasTexture_sn7cv")
+icon_tint = Color(1, 0.34, 0.44, 1)
+sell_price = 160
